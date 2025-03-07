@@ -70,6 +70,19 @@ main .container.grey{
     background-color: grey;
 }
 
+main .container.black{
+    background-color: black;
+}
+
+main .container.grey.special{
+    height: 600px;
+}
+
+main .container.grey.special .box.uno{
+    margin: 10px 30px;
+    background-color: green;
+}
+
 main .container.grey.reverse{
     flex-direction: row-reverse;
 }
@@ -77,6 +90,16 @@ main .container.grey.reverse{
 main .container .box{
     flex-grow: 1;
     margin: 10px 0;
+}
+
+main .container .box.special{
+    background-color: aqua;
+    flex-grow: 2;
+    margin-left: 30px;
+}
+
+main .container .box.bottom{
+    margin-right: 30px;
 }
 
 main .container .box.uno{
@@ -88,3 +111,7 @@ main .container .box.uno{
 main .container .box.due{
     margin-right: 50px;
 }
+
+
+
+/* FOOTER */
