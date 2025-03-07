@@ -112,6 +112,18 @@ main .container .box.due{
     margin-right: 50px;
 }
 
-
-
 /* FOOTER */
+
+footer{
+    background-color: black;
+}
+
+.container.footer{
+    background-color: azure;
+    width: 96%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
