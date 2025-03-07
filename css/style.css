@@ -8,6 +8,7 @@
 
 /* UTILI */
 
+
 .box{
     max-width: 300%;
     background-color: pink;
@@ -16,10 +17,12 @@
     padding-right: 30px;
 }
 
+/* HEADER */
+
 header.container{
     width: 100%;
     height: 300px;
-    background-color: brown;
+    background-color: blue;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -49,6 +52,39 @@ header.container{
     height: 70%;
 }
 
-main.container{
-    
+/* MAIN */
+
+main .container{
+    background-color: aquamarine;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+main .container.white{
+    background-color: white;
+}
+
+main .container.grey{
+    background-color: grey;
+}
+
+main .container.grey.reverse{
+    flex-direction: row-reverse;
+}
+
+main .container .box{
+    flex-grow: 1;
+    margin: 10px 0;
+}
+
+main .container .box.uno{
+    background-color: rgb(92, 144, 241);
+    margin-left: 50px;
+    flex-grow: 3;
+}
+
+main .container .box.due{
+    margin-right: 50px;
 }
