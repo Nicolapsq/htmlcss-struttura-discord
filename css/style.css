@@ -6,124 +6,168 @@
     padding: 0;
 }
 
-/* UTILI */
+img{
+    max-width: 100%;
+}
 
+a{
+    text-decoration: none;
+}
 
-.box{
-    max-width: 300%;
+ul{
+    list-style-type: none;
+}
+
+/* UTILS */
+
+.all,
+.all *{
+    min-height: 50px;
+    padding: 5px;
+    border: 1px dashed black;
+}
+
+.container{
+    max-width: 1100px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+.wrapper{
+    min-height: 100vh;  /* l'unita di misura "vh" va ad indicare una parte della finestra che visualizziamo sul monitor. 1vh è un centesimo di finestra, quindi 100vh è tutta la finestra. con il "min" avanti gli diciamo di prendere ALMENO tutta la finestra. se la pagina dovra scrollare con min-height non avremo problemi */
+    display: flex;
+    flex-direction: column;
+}
+
+.reverse{
+    flex-direction: row-reverse;
+}
+
+.azure{
+    background-color: rgb(42, 95, 240);
+}
+
+.pink{
     background-color: pink;
-    border: 2px solid black;
-    padding-left: 100px;
-    padding-right: 30px;
+}
+
+.grey{
+    background-color: grey;
+}
+
+.dark-grey{
+    background-color: rgb(36, 35, 35);
+}
+
+.black{
+    background-color: black;
+}
+
+.green{
+    background-color: green;
+}
+
+.light-green{
+    background-color: lightgreen;
 }
 
 /* HEADER */
 
-header.container{
+.wrapper .container{
     width: 100%;
-    height: 300px;
-    background-color: blue;
+    display: flex;
+    max-width: 80%;
+}
+
+.wrapper .wrapper-header{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+    gap: 10px;
 }
 
-.container .item-1{
+.wrapper .wrapper-header .container.other-BG-color{
     width: 100%;
-    display: flex;
-    justify-content: center;
+    background-color: blue;
+    max-width: 100%;
+
 }
 
-.item-1>.content{
-    flex-grow: 1;
+.wrapper .wrapper-header .container.other-BG-color .box.special{
+    background-color: violet;
 }
 
-.box.content{
+.wrapper .wrapper-header .container .box{
     background-color: yellow;
+    border: 1px solid black;
+    flex-grow: 1;
+    align-content: center;
 }
 
-.box.content.grow{
+.wrapper .wrapper-header .container .box:last-child{
+    text-align: end;
+}
+
+.wrapper .wrapper-header .container .box.large{
     flex-grow: 3;
-}
-
-.item-2{
-    width: 70%;
-    height: 70%;
+    text-align: center;
 }
 
 /* MAIN */
 
-main .container{
-    background-color: aquamarine;
-    width: 100%;
-    height: 300px;
+main{
+    flex-grow: 1;
+}
+
+.wrapper-main{
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper-main .box{
+    flex-grow: 1;
     display: flex;
     justify-content: center;
 }
 
-main .container.white{
-    background-color: white;
+.wrapper-main .box .content{
+    min-width: 30%;
 }
 
-main .container.grey{
-    background-color: grey;
-}
-
-main .container.black{
-    background-color: black;
-}
-
-main .container.grey.special{
-    height: 600px;
-}
-
-main .container.grey.special .box.uno{
-    margin: 10px 30px;
-    background-color: green;
-}
-
-main .container.grey.reverse{
-    flex-direction: row-reverse;
-}
-
-main .container .box{
+.wrapper-main .box .content.large{
     flex-grow: 1;
-    margin: 10px 0;
 }
 
-main .container .box.special{
-    background-color: aqua;
+.wrapper-main .box.grey .content.green{
+    width: 100%;
+}
+
+.wrapper-main .box.black .content{
+    min-width: 0;
+    flex-grow: 1;
+}
+
+.wrapper-main .box.black .content.pink{
     flex-grow: 2;
-    margin-left: 30px;
-}
-
-main .container .box.bottom{
-    margin-right: 30px;
-}
-
-main .container .box.uno{
-    background-color: rgb(92, 144, 241);
-    margin-left: 50px;
-    flex-grow: 3;
-}
-
-main .container .box.due{
-    margin-right: 50px;
 }
 
 /* FOOTER */
 
-footer{
-    background-color: black;
+.wrapper-footer.black{
+    display: flex;
+    justify-content: center;
 }
 
-.container.footer{
-    background-color: azure;
-    width: 96%;
-    margin: auto;
-    display: flex;
+.wrapper-footer.black .container.green{
     justify-content: space-between;
-    align-items: center;
-    height: 50px;
+}
+
+.wrapper-footer.black .container.green .logo.pink{
+    align-content: center;
+}
+
+.wrapper-footer.black .container.green .button.pink{
+    align-content: center;
 }
